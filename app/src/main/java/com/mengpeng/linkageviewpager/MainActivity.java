@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TabIndicatorView tabIndicatorView;
     private ViewPager viewPager;
 
-    private List<TextView> mViewList;
+    private List<View> mViewList;
     private IndicatorViewPager indicatorViewPager;
 
     @Override

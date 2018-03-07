@@ -24,11 +24,6 @@ public class MyAdapter extends DefaultIndicatorAdapter {
 
     @Override
     public View getViewForPage(int position, View convertView, ViewGroup container) {
-
-
-
-
-
         return list.get(position);
     }
 }

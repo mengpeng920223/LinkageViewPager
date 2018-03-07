@@ -1,0 +1,13 @@
+<resources>
+
+    <declare-styleable name="RadioGroupTabLayout">
+        <attr name="tabLayoutBackgroundColor" format="color|integer" />
+        <attr name="tabLayoutDefaultTextColor" format="color|integer" />
+        <attr name="tabLayoutTextSize" format="dimension|integer" />
+        <attr name="tabLayoutSelectedTextColor" format="color|integer" />
+        <attr name="tabLayoutPadding" format="dimension|integer" />
+        <attr name="tabLayoutLineColor" format="color|integer" />
+        <attr name="tabLayoutDefaultSelectIndex" format="integer" />
+    </declare-styleable>
+
+</resources>

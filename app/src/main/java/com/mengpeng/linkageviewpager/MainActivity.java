@@ -15,6 +15,7 @@ import com.mengpeng.linkageviewpager.widget.indicator.bar.SpringBar;
 import com.mengpeng.linkageviewpager.widget.indicator.listener.OnTransitionTextListener;
 import com.mengpeng.linkageviewpager.widget.tab.LinkTab;
 import com.mengpeng.linkageviewpager.widget.tab.RadioGroupTabLayout;
+import com.mengpeng.mphelper.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ToastUtils.getInstance().initToast(this);
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
@@ -85,6 +88,17 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onTabLayoutClickListener(int position) {
                         viewPager.setCurrentItem(position);
+
+                        if (position == 0) {
+                            ToastUtils.onSuccessShowToast(MainActivity.this, "success");
+                        } else if (position == 1) {
+                            ToastUtils.onDefaultWithoutIconShowToast(MainActivity.this, "default no icon");
+                        } else if (position == 2) {
+                            ToastUtils.onDefaultShowToast(MainActivity.this, "default");
+                        } else if (position == 3) {
+                            ToastUtils.onShowToast(MainActivity.this, "自定义", R.mipmap.ic_launcher_round, true);
+                        }
+                        
                     }
                 });
     }
